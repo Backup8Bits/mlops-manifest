@@ -6,7 +6,7 @@ metadata:
 spec:
   project: default
   source:
-    chart: postgres
+    chart: postgresql
     repoURL: https://charts.bitnami.com/bitnami
     valuesFile: values/mlflowdb.yaml
     targetRevision: 15.5.17
