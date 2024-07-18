@@ -1,7 +1,4 @@
-generators:
-  - secret-generator.yaml
-
-namespace: datases
+namespace: databases
 
 helmCharts:
 - name: postgresql
@@ -9,4 +6,4 @@ helmCharts:
   version: 16.3.0
   releaseName: postgresql
   valuesFile:  values.yaml
-  namespace: crm
+  namespace: databases
