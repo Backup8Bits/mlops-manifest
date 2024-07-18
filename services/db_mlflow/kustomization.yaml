@@ -1,0 +1,12 @@
+generators:
+  - secret-generator.yaml
+
+namespace: datases
+
+helmCharts:
+- name: postgresql
+  repo: https://charts.bitnami.com/bitnami
+  version: 16.3.0
+  releaseName: postgresql
+  valuesFile:  values.yaml
+  namespace: crm

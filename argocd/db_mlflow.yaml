@@ -1,0 +1,14 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: mlflow-db
+  namespace: argocd
+spec:
+  project: default
+  source:
+  repoURL: 'https://github.com/int8bits/mlops-manifest.git'
+  path: services/db_mlflow
+  targetRevision: main
+  destination:
+  server: 'https://kubernetes.default.svc'
+  namespace: databases
