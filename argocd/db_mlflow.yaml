@@ -6,9 +6,16 @@ metadata:
 spec:
   project: default
   source:
-    repoURL: 'https://github.com/int8bits/mlops-manifest.git'
-    path: services/db_mlflow
-    targetRevision: main
+    chart: postgresql
+    repoURL: https://charts.bitnami.com/bitnami
+    valuesFile: values/mlflowdb.yaml
+    targetRevision: 16.3.0
+    helm:
+      releaseName: mlflowdb
   destination:
     server: 'https://kubernetes.default.svc'
     namespace: databases
+  syncPolicy:
+    automated:
+      selfHeal: true
+      prune: true
