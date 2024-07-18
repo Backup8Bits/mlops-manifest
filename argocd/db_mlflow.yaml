@@ -10,7 +10,7 @@ spec:
     path: services/db_mlflow
     targetRevision: main
     plugin:
-      name: kustomize-enable-helm
+      name: kustomized-helm
   destination:
     server: 'https://kubernetes.default.svc'
     namespace: databases
