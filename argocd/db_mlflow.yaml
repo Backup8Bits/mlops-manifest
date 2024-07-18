@@ -6,9 +6,9 @@ metadata:
 spec:
   project: default
   source:
-  repoURL: 'https://github.com/int8bits/mlops-manifest.git'
-  path: services/db_mlflow
-  targetRevision: main
+    repoURL: 'https://github.com/int8bits/mlops-manifest.git'
+    path: services/db_mlflow
+    targetRevision: main
   destination:
-  server: 'https://kubernetes.default.svc'
-  namespace: databases
+    server: 'https://kubernetes.default.svc'
+    namespace: databases
