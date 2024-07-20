@@ -6,10 +6,12 @@ metadata:
 spec:
   project: default
   source:
+    chart: prometheus
     repoURL: 'https://charts.bitnami.com/bitnami'
     valuesFile: values/prometheus.yaml
     targetRevision: 1.3.12
-    path: prometheus
+    helm:
+      releaseName: prometheus
   destination:
     server: 'https://kubernetes.default.svc'
     namespace: monitoring
