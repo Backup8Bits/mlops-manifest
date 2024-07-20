@@ -6,11 +6,12 @@ metadata:
 spec:
   project: default
   source:
+    chart: grafana-loki
     repoURL: 'https://charts.bitnami.com/bitnami'
     valuesFile: values/loki.yaml
     targetRevision: 4.6.6
-
-    path: grafana-loki
+    helm:
+      releaseName: loki
   destination:
     server: 'https://kubernetes.default.svc'
     namespace: monitoring

@@ -9,7 +9,9 @@ spec:
     repoURL: 'https://charts.bitnami.com/bitnami'
     valuesFile: values/grafana.yaml
     targetRevision: 11.3.9
-    path: grafana
+    chart: grafana
+    helm:
+      releaseName: grafana
   destination:
     server: 'https://kubernetes.default.svc'
     namespace: monitoring
